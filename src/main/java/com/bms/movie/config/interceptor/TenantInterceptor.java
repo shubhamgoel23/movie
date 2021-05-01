@@ -1,4 +1,4 @@
-package com.bms.movie.config;
+package com.bms.movie.config.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

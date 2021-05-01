@@ -1,5 +1,6 @@
 package com.bms.movie.exceptions;
 
+import org.slf4j.MDC;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,7 +15,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import org.springframework.web.util.WebUtils;
 
-import brave.Tracer;
+import io.opentracing.Tracer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -73,8 +74,10 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 		headers.setContentType(MediaType.APPLICATION_JSON);
 //		BaggageField.create("user-id").updateValue("test-user");
 //		MDC.put("TRANS_ID", "user-id");
+//		tracer.currentSpan().context().traceIdString()
+//		tracer.activeSpan().context().toTraceId();
 		body = new Error(status, ex.getMessage(), ex, servletWebRequest.getRequest().getRequestURI(),
-				servletWebRequest.getRequest().getMethod(), tracer.currentSpan().context().traceIdString());
+				servletWebRequest.getRequest().getMethod(), MDC.get("trace-id"));
 		return new ResponseEntity<>(body, headers, status);
 	}
 

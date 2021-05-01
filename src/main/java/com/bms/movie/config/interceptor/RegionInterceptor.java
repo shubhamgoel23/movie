@@ -1,4 +1,4 @@
-package com.bms.movie.config;
+package com.bms.movie.config.interceptor;
 
 import java.util.Arrays;
 import java.util.Optional;

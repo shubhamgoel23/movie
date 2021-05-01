@@ -15,7 +15,7 @@ public class TenantController {
 
 	private final TenantService tenantService;
 
-	@PostMapping(value = "admin/tenant", produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "admin/tenants", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<TenantDto> createTenant(@RequestParam String tenant) {
 		return new ResponseEntity<>(tenantService.createTenant(tenant), HttpStatus.OK);
 	}

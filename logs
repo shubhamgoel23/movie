@@ -1,0 +1,160 @@
+2021-05-01 14:34:49.922  INFO [movie,,] 38874 --- [restartedMain] com.bms.movie.MovieApplication           : Starting MovieApplication using Java 15.0.2 on home with PID 38874 (/home/shubham/Documents/new/movie/target/classes started by shubham in /home/shubham/Documents/new/movie)
+2021-05-01 14:34:49.927  INFO [movie,,] 38874 --- [restartedMain] com.bms.movie.MovieApplication           : No active profile set, falling back to default profiles: default
+2021-05-01 14:34:50.002  INFO [movie,,] 38874 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-01 14:34:52.073  INFO [movie,,] 38874 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-01 14:34:52.145  INFO [movie,,] 38874 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 2 MongoDB repository interfaces.
+2021-05-01 14:34:52.414  INFO [movie,,] 38874 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9e26652c-1b57-3fc4-8868-ba7f560b8292
+2021-05-01 14:34:53.591  INFO [movie,,] 38874 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-01 14:34:53.602  INFO [movie,,] 38874 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-01 14:34:53.602  INFO [movie,,] 38874 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-05-01 14:34:53.698  INFO [movie,,] 38874 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-01 14:34:53.699  INFO [movie,,] 38874 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3695 ms
+2021-05-01 14:34:54.018 DEBUG [movie,,] 38874 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, filterRegistrationBean urls=[/*] order=-2147483643, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2021-05-01 14:34:54.019 DEBUG [movie,,] 38874 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2021-05-01 14:34:54.386 DEBUG [movie,,] 38874 --- [RestTemplateSender{http://localhost:9411/api/v2/spans} check()] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2021-05-01 14:34:54.389 DEBUG [movie,,] 38874 --- [RestTemplateSender{http://localhost:9411/api/v2/spans} check()] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2021-05-01 14:34:54.391 DEBUG [movie,,] 38874 --- [RestTemplateSender{http://localhost:9411/api/v2/spans} check()] org.springframework.web.HttpLogging      : Writing [[B@485cea78] as "application/json"
+2021-05-01 14:34:54.399  WARN [movie,,] 38874 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2021-05-01 14:34:54.655  INFO [movie,,] 38874 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[mongo1:9042, mongo2:9142, mongo3:9242], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-01 14:34:54.655  INFO [movie,,] 38874 --- [restartedMain] org.mongodb.driver.cluster               : Adding discovered server mongo1:9042 to client view of cluster
+2021-05-01 14:34:54.678  INFO [movie,,] 38874 --- [restartedMain] org.mongodb.driver.cluster               : Adding discovered server mongo2:9142 to client view of cluster
+2021-05-01 14:34:54.679  INFO [movie,,] 38874 --- [restartedMain] org.mongodb.driver.cluster               : Adding discovered server mongo3:9242 to client view of cluster
+2021-05-01 14:34:54.724  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo3:9242] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:69}] to mongo3:9242
+2021-05-01 14:34:54.724  INFO [movie,,] 38874 --- [cluster-rtt-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo3:9242] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:68}] to mongo3:9242
+2021-05-01 14:34:54.724  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo1:9042] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:86}] to mongo1:9042
+2021-05-01 14:34:54.724  INFO [movie,,] 38874 --- [cluster-rtt-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo1:9042] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:87}] to mongo1:9042
+2021-05-01 14:34:54.725  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo1:9042] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=mongo1:9042, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=26951819, setName='docker-rs', canonicalAddress=mongo1:9042, hosts=[mongo1:9042, mongo2:9142, mongo3:9242], passives=[], arbiters=[], primary='mongo2:9142', tagSet=TagSet{[]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=608cd321126b26d6e97a77fd, counter=8}, lastWriteDate=Sat May 01 14:34:49 IST 2021, lastUpdateTimeNanos=18931262800670}
+2021-05-01 14:34:54.726  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo1:9042] org.mongodb.driver.cluster               : Discovered cluster type of REPLICA_SET
+2021-05-01 14:34:54.728  INFO [movie,,] 38874 --- [cluster-rtt-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo2:9142] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:76}] to mongo2:9142
+2021-05-01 14:34:54.728  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo2:9142] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:77}] to mongo2:9142
+2021-05-01 14:34:54.729  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo2:9142] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=mongo2:9142, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=29529896, setName='docker-rs', canonicalAddress=mongo2:9142, hosts=[mongo1:9042, mongo2:9142, mongo3:9242], passives=[], arbiters=[], primary='mongo2:9142', tagSet=TagSet{[]}, electionId=7fffffff0000000000000006, setVersion=1, topologyVersion=TopologyVersion{processId=608cd321395b01e84bfd85a1, counter=7}, lastWriteDate=Sat May 01 14:34:49 IST 2021, lastUpdateTimeNanos=18931262517933}
+2021-05-01 14:34:54.730  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo2:9142] org.mongodb.driver.cluster               : Setting max election id to 7fffffff0000000000000006 from replica set primary mongo2:9142
+2021-05-01 14:34:54.730  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo3:9242] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=mongo3:9242, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=24432359, setName='docker-rs', canonicalAddress=mongo3:9242, hosts=[mongo1:9042, mongo2:9142, mongo3:9242], passives=[], arbiters=[], primary='mongo2:9142', tagSet=TagSet{[]}, electionId=null, setVersion=1, topologyVersion=TopologyVersion{processId=608cd325bf6abdf9d3230055, counter=5}, lastWriteDate=Sat May 01 14:34:49 IST 2021, lastUpdateTimeNanos=18931261532316}
+2021-05-01 14:34:54.730  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo2:9142] org.mongodb.driver.cluster               : Setting max set version to 1 from replica set primary mongo2:9142
+2021-05-01 14:34:54.730  INFO [movie,,] 38874 --- [cluster-ClusterId{value='608d19b6ef50d52f2921a261', description='null'}-mongo2:9142] org.mongodb.driver.cluster               : Discovered replica set primary mongo2:9142
+2021-05-01 14:34:55.454  INFO [movie,,] 38874 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-01 14:34:55.591  INFO [movie,,] 38874 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:78}] to mongo2:9142
+2021-05-01 14:34:56.071  INFO [movie,,] 38874 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-01 14:34:56.584  INFO [movie,,] 38874 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-01 14:34:56.634 DEBUG [movie,,] 38874 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-05-01 14:34:56.742 DEBUG [movie,,] 38874 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 15 mappings in 'requestMappingHandlerMapping'
+2021-05-01 14:34:56.817 DEBUG [movie,,] 38874 --- [restartedMain] o.s.w.s.c.annotation.WebMvcConfigurer    : Default resource handling disabled
+2021-05-01 14:34:57.060 DEBUG [movie,,] 38874 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/**] in 'resourceHandlerMapping'
+2021-05-01 14:34:57.083 DEBUG [movie,,] 38874 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-05-01 14:34:57.887  INFO [movie,,] 38874 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-01 14:34:57.925  INFO [movie,,] 38874 --- [restartedMain] com.bms.movie.MovieApplication           : Started MovieApplication in 8.559 seconds (JVM running for 9.597)
+2021-05-01 14:34:59.036  INFO [movie,,] 38874 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-01 14:34:59.036  INFO [movie,,] 38874 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-01 14:34:59.037 DEBUG [movie,,] 38874 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-05-01 14:34:59.037 DEBUG [movie,,] 38874 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2021-05-01 14:34:59.037 DEBUG [movie,,] 38874 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2021-05-01 14:34:59.039 DEBUG [movie,,] 38874 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@35c41f04
+2021-05-01 14:34:59.039 DEBUG [movie,,] 38874 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@a9bcb73
+2021-05-01 14:34:59.039 DEBUG [movie,,] 38874 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-05-01 14:34:59.040  INFO [movie,,] 38874 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-05-01 14:35:23.597 DEBUG [movie,3014add3df3bb2b9,3014add3df3bb2b9] 38874 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2021-05-01 14:35:23.606  WARN [movie,3014add3df3bb2b9,3014add3df3bb2b9] 38874 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2021-05-01 14:35:23.611 DEBUG [movie,3014add3df3bb2b9,3014add3df3bb2b9] 38874 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.bms.movie.exceptions.CustomExceptionHandler#handleException(Exception, WebRequest)
+2021-05-01 14:35:23.616 ERROR [movie,3014add3df3bb2b9,3014add3df3bb2b9] 38874 --- [http-nio-8080-exec-1] c.b.m.exceptions.CustomExceptionHandler  : No handler found for GET /
+
+org.springframework.web.servlet.NoHandlerFoundException: No handler found for GET /
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1275) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.5.jar:5.3.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.44.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:89) ~[spring-cloud-sleuth-instrumentation-3.0.2.jar:3.0.2]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:114) ~[spring-cloud-sleuth-autoconfigure-3.0.2.jar:3.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.4.4.jar:2.4.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-05-01 14:35:23.622 DEBUG [movie,3014add3df3bb2b9,3014add3df3bb2b9] 38874 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2021-05-01 14:35:23.638 DEBUG [movie,3014add3df3bb2b9,3014add3df3bb2b9] 38874 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Error(traceId=3014add3df3bb2b9, status=404 NOT_FOUND, series=404, timestamp=1619859923618, message=N (truncated)...]
+2021-05-01 14:35:23.691  WARN [movie,3014add3df3bb2b9,3014add3df3bb2b9] 38874 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.NoHandlerFoundException: No handler found for GET /]
+2021-05-01 14:35:23.692 DEBUG [movie,3014add3df3bb2b9,3014add3df3bb2b9] 38874 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-05-01 14:35:24.722 DEBUG [movie,,] 38874 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2021-05-01 14:35:24.723 DEBUG [movie,,] 38874 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2021-05-01 14:35:24.724 DEBUG [movie,,] 38874 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] org.springframework.web.HttpLogging      : Writing [[B@39d86e4b] as "application/json"
+2021-05-01 14:35:24.726  WARN [movie,,] 38874 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2021-05-01 14:35:24.729  WARN [movie,,] 38874 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.0.2.jar:3.0.2]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:132) ~[spring-cloud-sleuth-zipkin-3.0.2.jar:3.0.2]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:150) ~[spring-cloud-sleuth-zipkin-3.0.2.jar:3.0.2]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:140) ~[spring-cloud-sleuth-zipkin-3.0.2.jar:3.0.2]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.1.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1261) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1016) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.5.jar:5.3.5]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.5.jar:5.3.5]
+	... 9 common frames omitted
+
+2021-05-01 14:36:41.472  INFO [movie,,] 38874 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-05-01 14:36:41.509  INFO [movie,,] 38874 --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-01 14:36:41.524  INFO [movie,,] 38874 --- [RMI TCP Connection(6)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:7, serverValue:78}] to mongo2:9142 because the pool has been closed.
+2021-05-01 14:36:41.746 DEBUG [movie,,] 38874 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2021-05-01 14:36:41.747 DEBUG [movie,,] 38874 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2021-05-01 14:36:41.748 DEBUG [movie,,] 38874 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] org.springframework.web.HttpLogging      : Writing [[B@3f8b8135] as "application/json"
