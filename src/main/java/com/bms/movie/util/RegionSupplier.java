@@ -15,7 +15,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 public class RegionSupplier {
 
 	private RegionSupplier() {
-	};
+	}
 
 	public static BiFunction<HttpServletRequest, String, Optional<String>> getCookieByKey = (request, key) -> {
 		return Arrays.stream(request.getCookies()).filter(c -> key.equals(c.getName())).map(Cookie::getValue).findAny();

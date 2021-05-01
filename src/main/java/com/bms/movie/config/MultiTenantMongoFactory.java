@@ -2,6 +2,7 @@ package com.bms.movie.config;
 
 import org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory;
 
+import com.bms.movie.context.TenantContext;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoDatabase;
 
@@ -22,7 +23,7 @@ public class MultiTenantMongoFactory extends SimpleMongoClientDatabaseFactory {
 	}
 
 	protected String getTenantDatabase() {
-		String tenantId = TenantContext.getTenantId();
+		String tenantId = TenantContext.getTenant();
 		if (tenantId != null) {
 			return tenantId;
 		} else {

@@ -1,4 +1,4 @@
-package com.bms.movie.config;
+package com.bms.movie.context;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -7,13 +7,17 @@ public class TenantContext {
 
 	private static final ThreadLocal<String> CONTEXT = new ThreadLocal<>();
 
-	public static void setTenantId(String tenantId) {
-		log.debug("Setting tenantId to " + tenantId);
-		CONTEXT.set(tenantId);
+	private TenantContext() {
 
 	}
 
-	public static String getTenantId() {
+	public static void setTenant(String tenant) {
+		log.debug("Setting tenant to {}", tenant);
+		CONTEXT.set(tenant);
+
+	}
+
+	public static String getTenant() {
 		return CONTEXT.get();
 
 	}

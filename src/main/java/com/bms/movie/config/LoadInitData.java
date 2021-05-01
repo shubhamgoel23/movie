@@ -4,6 +4,7 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Component;
 
+import com.bms.movie.context.TenantContext;
 import com.bms.movie.tenant.Tenant;
 import com.bms.movie.tenant.TenantRepository;
 
@@ -17,7 +18,7 @@ public class LoadInitData {
 
 	@PostConstruct
 	public void init() {
-		TenantContext.setTenantId("tenant");
+		TenantContext.setTenant("tenant");
 		if (tenantRepository.existsByName("tenant"))
 			return;
 
