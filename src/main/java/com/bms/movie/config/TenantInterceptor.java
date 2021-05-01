@@ -30,10 +30,8 @@ public class TenantInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		String tenantId = request.getHeader(TENANT_HTTP_HEADER);
-		if (ObjectUtils.isEmpty(tenantId)) {
-			log.error("Tenant header not found.");
+		if (ObjectUtils.isEmpty(tenantId)) 
 			throw new BookMyShowBadRequestException("Tenant header not found.");
-		}
 
 		Tenant tenant = tenantRepository.findById(tenantId)
 				.orElseThrow(() -> new BookMyShowBadRequestException("Tenant header not valid."));

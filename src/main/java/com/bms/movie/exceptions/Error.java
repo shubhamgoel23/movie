@@ -1,7 +1,6 @@
 package com.bms.movie.exceptions;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -23,7 +22,7 @@ public class Error implements Serializable {
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	private int series;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
-	private LocalDateTime timestamp;
+	private long timestamp;
 	private String message;
 	private String debugMessage;
 	private String method;
@@ -31,7 +30,7 @@ public class Error implements Serializable {
 	private List<SubError> subErrors;
 
 	private Error() {
-		timestamp = LocalDateTime.now();
+		timestamp = System.currentTimeMillis();
 	}
 
 	public Error(HttpStatus status) {
