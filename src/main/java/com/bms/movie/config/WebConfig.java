@@ -14,7 +14,7 @@ public class WebConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addWebRequestInterceptor(tenantInterceptor).excludePathPatterns("/v3/api-docs/**",
+		registry.addInterceptor(tenantInterceptor).excludePathPatterns("/v3/api-docs/**",
                 "/swagger-resources/**",
                 "/swagger-ui.html",
                 "/webjars/**",
