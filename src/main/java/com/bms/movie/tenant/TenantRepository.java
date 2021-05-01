@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface TenantRepository extends MongoRepository<Tenant, String> {
 
 	Optional<Tenant> findById(String id);
-	
+
 	boolean existsByName(String name);
 }

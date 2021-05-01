@@ -1,8 +1,5 @@
 package com.bms.movie.exceptions;
 
-import java.util.Arrays;
-
-import org.slf4j.MDC;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -18,8 +15,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import org.springframework.web.util.WebUtils;
 
 import brave.Tracer;
-import brave.baggage.BaggageField;
-import brave.propagation.ExtraFieldPropagation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,11 +26,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
-	
+
 	private final Tracer tracer;
 
-	
-	
 	@ExceptionHandler(BookMyShowBadRequestException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 //	@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -81,7 +74,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 //		BaggageField.create("user-id").updateValue("test-user");
 //		MDC.put("TRANS_ID", "user-id");
 		body = new Error(status, ex.getMessage(), ex, servletWebRequest.getRequest().getRequestURI(),
-				servletWebRequest.getRequest().getMethod(),tracer.currentSpan().context().traceIdString());
+				servletWebRequest.getRequest().getMethod(), tracer.currentSpan().context().traceIdString());
 		return new ResponseEntity<>(body, headers, status);
 	}
 
