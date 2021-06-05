@@ -1,4 +1,4 @@
-package com.bms.movie.config;
+package com.bms.movie.config.mongo;
 
 import org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory;
 
@@ -8,13 +8,8 @@ import com.mongodb.client.MongoDatabase;
 
 public class MultiTenantMongoFactory extends SimpleMongoClientDatabaseFactory {
 
-	private final String globalDbName;
-
-
-
-	public MultiTenantMongoFactory(MongoClient mongoClient, String globalDbName) {
-		super(mongoClient, globalDbName);
-		this.globalDbName = globalDbName;
+	public MultiTenantMongoFactory(MongoClient mongoClient, String databaseName) {
+		super(mongoClient, databaseName);
 	}
 
 	@Override
@@ -23,11 +18,6 @@ public class MultiTenantMongoFactory extends SimpleMongoClientDatabaseFactory {
 	}
 
 	protected String getTenantDatabase() {
-		String tenantId = TenantContext.getTenant();
-		if (tenantId != null) {
-			return tenantId;
-		} else {
-			return globalDbName;
-		}
+		return TenantContext.getTenant();
 	}
 }

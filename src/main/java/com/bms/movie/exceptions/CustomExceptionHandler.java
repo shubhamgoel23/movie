@@ -15,7 +15,6 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import org.springframework.web.util.WebUtils;
 
-import io.opentracing.Tracer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,8 +26,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
-
-	private final Tracer tracer;
 
 	@ExceptionHandler(BookMyShowBadRequestException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)

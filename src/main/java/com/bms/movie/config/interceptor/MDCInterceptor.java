@@ -24,8 +24,8 @@ public class MDCInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 
-		MDC.put("trace-id", tracer.activeSpan().context().toTraceId());
-		MDC.put("span-id", tracer.activeSpan().context().toSpanId());
+//		MDC.put("trace-id", tracer.activeSpan().context().toTraceId());
+//		MDC.put("span-id", tracer.activeSpan().context().toSpanId());
 		return true;
 	}
 

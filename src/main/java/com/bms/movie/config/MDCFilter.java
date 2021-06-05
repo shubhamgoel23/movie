@@ -23,8 +23,8 @@ public class MDCFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
         try {
-        	MDC.put("trace-id", tracer.activeSpan().context().toTraceId());
-    		MDC.put("span-id", tracer.activeSpan().context().toSpanId());
+//        	MDC.put("trace-id", tracer.activeSpan().context().toTraceId());
+//    		MDC.put("span-id", tracer.activeSpan().context().toSpanId());
             // Setup MDC data:
             String mdcData = String.format("[userId:%s | requestId:%s] ", "hello", "hello");
             MDC.put("mdcData", mdcData); //Variable 'mdcData' is referenced in Spring Boot's logging.pattern.level property

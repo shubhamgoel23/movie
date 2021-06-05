@@ -29,6 +29,7 @@ public class TenantInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
+		String requestUri = request.getRequestURI();
 		String tenantId = request.getHeader(TENANT_HTTP_HEADER);
 		if (ObjectUtils.isEmpty(tenantId)) 
 			throw new BookMyShowBadRequestException("Tenant header not found.");
@@ -36,7 +37,7 @@ public class TenantInterceptor implements HandlerInterceptor {
 		Tenant tenant = tenantRepository.findById(tenantId)
 				.orElseThrow(() -> new BookMyShowBadRequestException("Tenant header not valid."));
 		
-		String requestUri = request.getRequestURI();
+//		String requestUri = request.getRequestURI();
 		if (requestUri.startsWith("/admin") && !tenant.getName().equalsIgnoreCase("tenant"))
 			throw new BookMyShowBadRequestException("Access Denied");
 
